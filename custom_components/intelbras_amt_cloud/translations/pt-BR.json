@@ -1,0 +1,77 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Central de alarme Intelbras",
+        "description": "Informe o MAC da central e a senha remota (a mesma usada no app AMT Mobile). O MAC aparece no app em Editar central ou na etiqueta do módulo Ethernet.",
+        "data": {
+          "mac": "MAC da central",
+          "password": "Senha remota",
+          "model": "Modelo"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Senha da central",
+        "description": "A central {mac} recusou a senha. Digite a senha remota atual.",
+        "data": {
+          "password": "Senha remota"
+        }
+      }
+    },
+    "error": {
+      "invalid_mac": "MAC inválido (use 12 dígitos hexadecimais, ex.: 18:0D:2C:EB:BD:E7)",
+      "invalid_auth": "Senha remota recusada pela central",
+      "panel_offline": "A central não está conectada à nuvem Intelbras",
+      "panel_busy": "Outro aparelho está conectado à central agora. Feche o app no celular e tente de novo",
+      "wrong_model": "A resposta da central não corresponde ao modelo escolhido",
+      "cannot_connect": "Não foi possível falar com a nuvem Intelbras"
+    },
+    "abort": {
+      "already_configured": "Esta central já está configurada",
+      "reauth_successful": "Senha atualizada"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Atualização",
+        "data": {
+          "scan_interval": "Intervalo de consulta (segundos)"
+        }
+      }
+    }
+  },
+  "selector": {
+    "model": {
+      "options": {
+        "anm24net": "ANM 24 Net / ANM 24 Net G2",
+        "amt2018": "AMT 2018 / 2018 E / 2018 EG (experimental)",
+        "amt2018esmart": "AMT 2018 E Smart (experimental)",
+        "amt4010": "AMT 4010 (experimental)"
+      }
+    }
+  },
+  "entity": {
+    "alarm_control_panel": {
+      "panel": {
+        "name": "Alarme"
+      },
+      "partition": {
+        "name": "Partição {partition}"
+      }
+    },
+    "binary_sensor": {
+      "siren": {
+        "name": "Sirene disparada"
+      },
+      "connected": {
+        "name": "Conectado à nuvem"
+      }
+    },
+    "sensor": {
+      "firmware": {
+        "name": "Firmware"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "domain": "intelbras_amt_cloud",
+  "name": "Intelbras AMT (nuvem)",
+  "codeowners": [
+    "@cleberdevsoares"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/cleberdevsoares/homeassistant-intelbras-amt",
+  "integration_type": "device",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/cleberdevsoares/homeassistant-intelbras-amt/issues",
+  "loggers": [
+    "custom_components.intelbras_amt_cloud"
+  ],
+  "requirements": [],
+  "version": "1.0.0"
+}

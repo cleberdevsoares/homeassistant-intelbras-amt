@@ -1,0 +1,77 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Intelbras alarm panel",
+        "description": "Enter the panel MAC address and the remote password (the same one used in the AMT Mobile app). The MAC is shown in the app under Edit panel or on the Ethernet module label.",
+        "data": {
+          "mac": "Panel MAC",
+          "password": "Remote password",
+          "model": "Model"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Panel password",
+        "description": "Panel {mac} rejected the password. Enter the current remote password.",
+        "data": {
+          "password": "Remote password"
+        }
+      }
+    },
+    "error": {
+      "invalid_mac": "Invalid MAC (use 12 hex digits, e.g. 18:0D:2C:EB:BD:E7)",
+      "invalid_auth": "Remote password rejected by the panel",
+      "panel_offline": "The panel is not connected to the Intelbras cloud",
+      "panel_busy": "Another device is connected to the panel right now. Close the phone app and try again",
+      "wrong_model": "The panel response does not match the selected model",
+      "cannot_connect": "Could not reach the Intelbras cloud"
+    },
+    "abort": {
+      "already_configured": "This panel is already configured",
+      "reauth_successful": "Password updated"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "selector": {
+    "model": {
+      "options": {
+        "anm24net": "ANM 24 Net / ANM 24 Net G2",
+        "amt2018": "AMT 2018 / 2018 E / 2018 EG (experimental)",
+        "amt2018esmart": "AMT 2018 E Smart (experimental)",
+        "amt4010": "AMT 4010 (experimental)"
+      }
+    }
+  },
+  "entity": {
+    "alarm_control_panel": {
+      "panel": {
+        "name": "Alarm"
+      },
+      "partition": {
+        "name": "Partition {partition}"
+      }
+    },
+    "binary_sensor": {
+      "siren": {
+        "name": "Siren triggered"
+      },
+      "connected": {
+        "name": "Cloud connected"
+      }
+    },
+    "sensor": {
+      "firmware": {
+        "name": "Firmware"
+      }
+    }
+  }
+}
